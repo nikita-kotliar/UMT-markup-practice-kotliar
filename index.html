@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="wed-sopp do by a flowers by your device.">
+
     <title>Flower Shop | Доставка квітів</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,10 +18,18 @@
       integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    />
+    <link
+      rel="preload"
+      href="./css/styles.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    >
+    <noscript>
+      <link rel="stylesheet" href="./css/styles.css" />
+    </noscript>
 
     <script type="module" crossorigin src="/UMT-markup-practice-kotliar/src\index.js"></script>
-    <link rel="stylesheet" crossorigin href="/UMT-markup-practice-kotliar/assets/index-DRmdDzJp.css">
   </head>
     <body>
     <header>
@@ -30,14 +40,14 @@
       </svg>
     </a>
     <ul class="nav-list">
-      <li><a href="#AboutUs">About Us</a></li>
-      <li><a href="#Bestsellers">Bestsellers</a></li>
-      <li><a href="#Bouquets">Bouquets</a></li>
-      <li><a href="#Feedback">Feedback</a></li>
-      <li><a href="#Contacts">Contacts</a></li>
+      <li><a aria-label="about us" href="#AboutUs">About Us</a></li>
+      <li><a aria-label="bestsellers" href="#Bestsellers">Bestsellers</a></li>
+      <li><a aria-label="bouquets" href="#Bouquets">Bouquets</a></li>
+      <li><a aria-label="feedback" href="#Feedback">Feedback</a></li>
+      <li><a aria-label="contacts" href="#Contacts">Contacts</a></li>
     </ul>
     <div class="header-right">
-      <a class="button animated-button header-button" href="#Bestsellers">Explore Bouquets</a>
+      <a class="button animated-button header-button" aria-label="explore bouquets" href="#Bestsellers">Explore Bouquets</a>
       <button
         class="open-mobile-menu-btn"
         type="button"
@@ -64,13 +74,13 @@
 <div class="mobile-menu-wrapper">
   <div class="mobile-menu container">
     <ul class="nav-list">
-      <li><a class="mobile-menu-href-js" href="#AboutUs">About Us</a></li>
-      <li><a class="mobile-menu-href-js" href="#Bestsellers">Bestsellers</a></li>
-      <li><a class="mobile-menu-href-js" href="#Bouquets">Bouquets</a></li>
-      <li><a class="mobile-menu-href-js" href="#Feedback">Feedback</a></li>
-      <li><a class="mobile-menu-href-js" href="#Contacts">Contacts</a></li>
+      <li><a aria-label="about us" class="mobile-menu-href-js" href="#AboutUs">About Us</a></li>
+      <li><a aria-label="bestsellers" class="mobile-menu-href-js" href="#Bestsellers">Bestsellers</a></li>
+      <li><a aria-label="bouquets" class="mobile-menu-href-js" href="#Bouquets">Bouquets</a></li>
+      <li><a aria-label="feedback" class="mobile-menu-href-js" href="#Feedback">Feedback</a></li>
+      <li><a aria-label="contacts" class="mobile-menu-href-js" href="#Contacts">Contacts</a></li>
     </ul>
-    <a class="button animated-button header-button" href="#Bestsellers">Explore Bouquets</a>
+    <a class="button animated-button header-button" aria-label="show explore bouquets" href="#Bestsellers">Explore Bouquets</a>
   </div>
 </div>
 
@@ -91,7 +101,7 @@
       expertly crafted arrangements are designed to bring joy and elegance to
       your celebrations.
     </p>
-    <a class="button animated-button" href="#Bestsellers">
+    <a aria-label="explore our bestsellers" class="button animated-button" href="#Bestsellers">
       Explore Our Bestsellers
     </a>
   </div>
@@ -194,12 +204,12 @@
         ><span class="dot"></span>
       </div>
       <div class="arrows">
-        <button>
+        <button aria-label="Show previous bouquet" type="button">
           <svg class="arrow icon-arrow-left" width="48" height="48">
             <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-left-arrow-alt"></use>
           </svg>
         </button>
-        <button>
+        <button aria-label="Show next bouquet" type="button">
           <svg class="arrow icon-arrow-right" width="48" height="48">
             <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-right-arrow-alt"></use>
           </svg>
@@ -346,7 +356,7 @@
         </div>
       </li>
     </ul>
-    <button class="button animated-button" type="button">Show More</button>
+    <button class="button animated-button" aria-label="Show more bouquets" type="button">Show More</button>
   </div>
 </section>
 
@@ -368,12 +378,12 @@
       </li>
     </ul>
     <div class="reviews-nav">
-      <button>
+      <button aria-label="Show previous review" type="button">
         <svg class="arrow icon-arrow-left" width="48" height="48">
           <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-left-arrow-alt"></use>
         </svg>
       </button>
-      <button>
+      <button aria-label="Show next review" type="button">
         <svg class="arrow icon-arrow-right" width="48" height="48">
           <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-right-arrow-alt"></use>
         </svg>
@@ -399,7 +409,7 @@
           </svg>
           <div class="text">
             <p class="contact-type">Phone</p>
-            <a href="tel:+15551234567" class="contact tel">+1 (555) 123-4567</a>
+            <a href="tel:+15551234567" class="contact tel" aria-label="Call us at +1 (555) 123-4567">+1 (555) 123-4567</a>
           </div>
         </li>
         <li class="contact-item">
@@ -412,6 +422,7 @@
               href="https://maps.google.com/?q=456+Floral+Ave,+Sydney+NSW+2000+AU"
               class="contact"
               target="_blank"
+              aria-label="Find us on Google Maps at 456 Floral Ave, Sydney NSW 2000 AU"
               >456 Floral Ave, Sydney NSW 2000 AU</a
             >
           </div>
@@ -432,45 +443,45 @@
     <footer id="footer" class="footer-section">
   <div class="container">
     <div class="main">
-      <a href="#" class="logo">
+      <a aria-label="logo" href="#" class="logo">
         <svg class="icon" width="296" height="126">
           <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Company-Logo"></use>
         </svg>
       </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#AboutUs" class="nav-href">About Us</a>
+          <a aria-label="about us" href="#AboutUs" class="nav-href">About Us</a>
         </li>
         <li class="nav-item">
-          <a href="#Bestsellers" class="nav-href">Bestsellers</a>
+          <a aria-label="bestsellers" href="#Bestsellers" class="nav-href">Bestsellers</a>
         </li>
         <li class="nav-item">
-          <a href="#Bouquets" class="nav-href">Bouquets</a>
+          <a aria-label="bouquets" href="#Bouquets" class="nav-href">Bouquets</a>
         </li>
         <li class="nav-item">
-          <a href="#Feedback" class="nav-href">Feedback</a>
+          <a aria-label="feedback" href="#Feedback" class="nav-href">Feedback</a>
         </li>
         <li class="nav-item">
-          <a href="#Contacts" class="nav-href">Contacts</a>
+          <a aria-label="contacts" href="#Contacts" class="nav-href">Contacts</a>
         </li>
       </ul>
       <ul class="contacts-list">
         <li class="contacts">
-          <a href="https://www.facebook.com" target="_blank">
+          <a aria-label="facebook" href="https://www.facebook.com" target="_blank">
             <svg class="icon" width="40" height="40">
               <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Facebook"></use>
             </svg>
           </a>
         </li>
         <li class="contacts">
-          <a href="https://www.instagram.com" target="_blank">
+          <a aria-label="instagram" href="https://www.instagram.com" target="_blank">
             <svg class="icon" width="40" height="40">
               <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Instagram"></use>
             </svg>
           </a>
         </li>
         <li class="contacts">
-          <a href="https://x.com" target="_blank">
+          <a aria-label="twitter" href="https://x.com" target="_blank">
             <svg class="icon" width="40" height="40">
               <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-X"></use>
             </svg>
