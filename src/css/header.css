@@ -134,6 +134,13 @@ header {
   .mobile-menu-wrapper .mobile-menu {
     align-items: center;
   }
+  header .container {
+    padding: 0 20px;
+  }
+
+  .mobile-menu-wrapper .container {
+    padding: 0 20px;
+  }
 }
 
 @media (min-width: 1440px) {
