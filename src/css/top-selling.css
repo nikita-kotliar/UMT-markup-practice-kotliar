@@ -43,8 +43,7 @@
     font-weight: 600;
     font-size: 18px;
     font-family: "Roboto", sans-serif;
-    font-style: SemiBold;
-    letter-spacing: 0%;
+    letter-spacing: 0em;
     line-height: 1.5;
 }
 
@@ -56,7 +55,6 @@
     margin-top: 8px;
     font-weight: 600;
     font-size: 20px;
-    font-style: SemiBold;
 }
 
 .top-selling-section .gallery-nav {
@@ -95,10 +93,7 @@
 }
 
 .top-selling-section .arrow {
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--black), transparent 85%);
     padding: 12px;
-    background-color: var(--white);
 }
 
 .top-selling-section .arrow {

@@ -32,8 +32,19 @@
   margin-top: 32px;
   height: 44px;
   width: 100%;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-weight: 500;
+  border-radius: 32px;
+  transition: 0.3s;
+  cursor: pointer;
 
+}
+.hero-section .button:hover {
+  opacity: 0.5;
+}
 @media (min-width: 768px) {
   .hero-section .container {
     display: flex;

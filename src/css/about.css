@@ -20,6 +20,18 @@
   border-radius: 32px;
 }
 
+.icon-flower-wrap {
+  display: inline-block;
+  transform-origin: bottom center;
+  animation: sway 3.8s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%   { transform: rotate(-1deg); }
+  50%  { transform: rotate(1deg); }
+  100% { transform: rotate(-1deg); }
+}
+
 @media (min-width: 768px) {
   .about-section .container {
     flex-direction: row;

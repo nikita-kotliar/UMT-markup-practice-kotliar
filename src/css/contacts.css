@@ -16,8 +16,7 @@
     font-weight: 600;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
-    font-style: SemiBold;
-    letter-spacing: 0%;
+    letter-spacing: 0em;
     line-height: 1.5;
 }
 
@@ -55,7 +54,8 @@
 
 .contacts-section .contact-type {
     line-height: 1.4;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
+
 }
 
 .contacts-section .contact {

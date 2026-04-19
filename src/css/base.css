@@ -57,7 +57,7 @@ h2,
 h3 {
   font-family: "Hanuman", serif;
   line-height: var(--title-line);
-  letter-spacing: -1%;
+  letter-spacing: -0.01em;
 }
 
 h2 {
@@ -79,7 +79,6 @@ a {
 img {
   max-width: 100%;
   display: block;
-  
 }
 
 button {
@@ -97,6 +96,16 @@ button:hover {
   opacity: 0.5;
 }
 
+button.animated-arrow-button {
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--black), transparent 85%);
+  background-color: var(--white);
+}
+button.animated-arrow-button:hover {
+  background-color: #7af259;
+  opacity: 1;
+}
+
 .animated-button {
   background: linear-gradient(
     90deg,
@@ -107,7 +116,7 @@ button:hover {
     var(--yellow-button) 65%,
     var(--yellow-button) 85%,
     var(--green-button) 100%
-);
+  );
 
   background-size: 200% auto;
   animation: gradientMove 25s linear infinite;

@@ -3,41 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flower Shop - доставка квітів." />
     <title>Flower Shop | Доставка квітів</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <script type="module" crossorigin src="/UMT-markup-practice-kotliar/src\index.js"></script>
-    <link rel="stylesheet" crossorigin href="/UMT-markup-practice-kotliar/assets/index-B81UxEIM.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="preconnect"
+    />
+    <script type="module" crossorigin src="/UMT-markup-practice-kotliar/assets/index-BHfDD1ug.js"></script>
+    <link rel="stylesheet" crossorigin href="/UMT-markup-practice-kotliar/assets/index-DnAZ6Sna.css">
   </head>
-    <body>
+  <body>
     <header>
   <nav class="container header_container">
     <a href="#" class="icon">
       <svg width="84" height="36" class="logo-icon">
-        <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Company-Logo"></use>
+        <use href="./symbol-defs.svg#icon-Company-Logo"></use>
       </svg>
     </a>
     <ul class="nav-list">
-      <li><a href="#AboutUs">About Us</a></li>
-      <li><a href="#Bestsellers">Bestsellers</a></li>
-      <li><a href="#Bouquets">Bouquets</a></li>
-      <li><a href="#Feedback">Feedback</a></li>
-      <li><a href="#Contacts">Contacts</a></li>
+      <li><a aria-label="about us" href="#AboutUs">About Us</a></li>
+      <li><a aria-label="bestsellers" href="#Bestsellers">Bestsellers</a></li>
+      <li><a aria-label="bouquets" href="#Bouquets">Bouquets</a></li>
+      <li><a aria-label="feedback" href="#Feedback">Feedback</a></li>
+      <li><a aria-label="contacts" href="#Contacts">Contacts</a></li>
     </ul>
     <div class="header-right">
-      <button class="button animated-button" type="button">Explore Bouquets</button>
+      <a class="button animated-button header-button" aria-label="explore bouquets" href="#Bestsellers">Explore Bouquets</a>
       <button
         class="open-mobile-menu-btn"
         type="button"
@@ -45,7 +37,7 @@
         aria-label="Open menu"
       >
         <svg class="icon-mobile-nav" width="48" height="48">
-          <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-menu"></use>
+          <use href="./symbol-defs.svg#icon-menu"></use>
         </svg>
       </button>
       <button
@@ -55,7 +47,7 @@
         aria-label="Close menu"
       >
         <svg class="icon-mobile-nav" width="48" height="48">
-          <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-x-close"></use>
+          <use href="./symbol-defs.svg#icon-x-close"></use>
         </svg>
       </button>
     </div>
@@ -64,13 +56,13 @@
 <div class="mobile-menu-wrapper">
   <div class="mobile-menu container">
     <ul class="nav-list">
-      <li><a class="mobile-menu-href-js" href="#AboutUs">About Us</a></li>
-      <li><a class="mobile-menu-href-js" href="#Bestsellers">Bestsellers</a></li>
-      <li><a class="mobile-menu-href-js" href="#Bouquets">Bouquets</a></li>
-      <li><a class="mobile-menu-href-js" href="#Feedback">Feedback</a></li>
-      <li><a class="mobile-menu-href-js" href="#Contacts">Contacts</a></li>
+      <li><a aria-label="about us" class="mobile-menu-href-js" href="#AboutUs">About Us</a></li>
+      <li><a aria-label="bestsellers" class="mobile-menu-href-js" href="#Bestsellers">Bestsellers</a></li>
+      <li><a aria-label="bouquets" class="mobile-menu-href-js" href="#Bouquets">Bouquets</a></li>
+      <li><a aria-label="feedback" class="mobile-menu-href-js" href="#Feedback">Feedback</a></li>
+      <li><a aria-label="contacts" class="mobile-menu-href-js" href="#Contacts">Contacts</a></li>
     </ul>
-    <button class="button animated-button" type="button">Explore Bouquets</button>
+    <a class="button animated-button header-button" aria-label="show explore bouquets" href="#Bestsellers">Explore Bouquets</a>
   </div>
 </div>
 
@@ -79,8 +71,8 @@
       <section class="hero-section">
   <div class="container">
     <img
-      src="/UMT-markup-practice-kotliar/img/main-1x.webp"
-      srcset="/UMT-markup-practice-kotliar/img/main-1x.webp 1x, /UMT-markup-practice-kotliar/img/main-2x.webp 2x"
+      src="./img/main-1x.webp"
+      srcset="./img/main-1x.webp 1x, ./img/main-2x.webp 2x"
       alt="flowers image"
       class="main-image"
       fetchpriority="high"
@@ -91,18 +83,20 @@
       expertly crafted arrangements are designed to bring joy and elegance to
       your celebrations.
     </p>
-    <button class="button animated-button" type="button">
+    <a aria-label="explore our bestsellers" class="button animated-button" href="#Bestsellers">
       Explore Our Bestsellers
-    </button>
+    </a>
   </div>
 </section>
 
       <section id="AboutUs" class="about-section">
   <div class="container">
     <div class="text-div">
-      <svg class="icon" width="96" height="85">
-        <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Flower"></use>
-      </svg>
+      <span class="icon-flower-wrap">
+        <svg class="icon" width="96" height="85">
+          <use href="./symbol-defs.svg#icon-Flower"></use>
+        </svg>
+      </span>
       <h2 class="title">Our Passion for Floral Artistry</h2>
       <p class="text">
         At Flora, we believe that every bouquet tells a story. Our team
@@ -120,12 +114,12 @@
     <picture class="about-image">
       <source
         media="(max-width: 1439px)"
-        srcset="/UMT-markup-practice-kotliar/img/hero-mobile-1x.webp 1x, /UMT-markup-practice-kotliar/img/hero-mobile-2x.webp 2x"
+        srcset="./img/hero-mobile-1x.webp 1x, ./img/hero-mobile-2x.webp 2x"
       />
 
       <img
-        src="/UMT-markup-practice-kotliar/img/hero-1x.webp"
-        srcset="/UMT-markup-practice-kotliar/img/hero-1x.webp 1x, /UMT-markup-practice-kotliar/img/hero-2x.webp 2x"
+        src="./img/hero-1x.webp"
+        srcset="./img/hero-1x.webp 1x, ./img/hero-2x.webp 2x"
         alt="Girl with flowers"
         class="about-image"
         fetchpriority="high"
@@ -140,8 +134,8 @@
     <ul class="gallery-container">
       <li class="gallery-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/9.webp"
-          srcset="/UMT-markup-practice-kotliar/img/9.webp 1x, /UMT-markup-practice-kotliar/img/9-2x.webp 2x"
+          src="./img/9.webp"
+          srcset="./img/9.webp 1x, ./img/9-2x.webp 2x"
           alt="flowers image"
           class="image"
         />
@@ -156,8 +150,8 @@
       </li>
       <li class="gallery-item tablet">
         <img
-          src="/UMT-markup-practice-kotliar/img/10.webp"
-          srcset="/UMT-markup-practice-kotliar/img/10.webp 1x, /UMT-markup-practice-kotliar/img/10-2x.webp 2x"
+          src="./img/10.webp"
+          srcset="./img/10.webp 1x, ./img/10-2x.webp 2x"
           alt="flowers image"
           class="image"
         />
@@ -172,8 +166,8 @@
       </li>
       <li class="gallery-item desktop">
         <img
-          src="/UMT-markup-practice-kotliar/img/11.webp"
-          srcset="/UMT-markup-practice-kotliar/img/11.webp 1x, /UMT-markup-practice-kotliar/img/11-2x.webp 2x"
+          src="./img/11.webp"
+          srcset="./img/11.webp 1x, ./img/11-2x.webp 2x"
           alt="flowers image"
           class="image"
         />
@@ -194,14 +188,14 @@
         ><span class="dot"></span>
       </div>
       <div class="arrows">
-        <button>
+        <button class="animated-arrow-button" aria-label="Show previous bouquet" type="button">
           <svg class="arrow icon-arrow-left" width="48" height="48">
-            <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-left-arrow-alt"></use>
+            <use href="./symbol-defs.svg#icon-left-arrow-alt"></use>
           </svg>
         </button>
-        <button>
+        <button class="animated-arrow-button" aria-label="Show next bouquet" type="button">
           <svg class="arrow icon-arrow-right" width="48" height="48">
-            <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-right-arrow-alt"></use>
+            <use href="./symbol-defs.svg#icon-right-arrow-alt"></use>
           </svg>
         </button>
       </div>
@@ -218,8 +212,8 @@
     <ul class="list-container">
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/1.webp"
-          srcset="/UMT-markup-practice-kotliar/img/1.webp 1x, /UMT-markup-practice-kotliar/img/1-2x.webp 2x"
+          src="./img/1.webp"
+          srcset="./img/1.webp 1x, ./img/1-2x.webp 2x"
           alt="flowers image"
           class="flower image"
           fetchpriority="high"
@@ -235,8 +229,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/2.webp"
-          srcset="/UMT-markup-practice-kotliar/img/2.webp 1x, /UMT-markup-practice-kotliar/img/2-2x.webp 2x"
+          src="./img/2.webp"
+          srcset="./img/2.webp 1x, ./img/2-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -251,8 +245,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/3.webp"
-          srcset="/UMT-markup-practice-kotliar/img/3.webp 1x, /UMT-markup-practice-kotliar/img/3-2x.webp 2x"
+          src="./img/3.webp"
+          srcset="./img/3.webp 1x, ./img/3-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -267,8 +261,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/4.webp"
-          srcset="/UMT-markup-practice-kotliar/img/4.webp 1x, /UMT-markup-practice-kotliar/img/4-2x.webp 2x"
+          src="./img/4.webp"
+          srcset="./img/4.webp 1x, ./img/4-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -283,8 +277,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/5.webp"
-          srcset="/UMT-markup-practice-kotliar/img/5.webp 1x, /UMT-markup-practice-kotliar/img/5-2x.webp 2x"
+          src="./img/5.webp"
+          srcset="./img/5.webp 1x, ./img/5-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -299,8 +293,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/6.webp"
-          srcset="/UMT-markup-practice-kotliar/img/6.webp 1x, /UMT-markup-practice-kotliar/img/6-2x.webp 2x"
+          src="./img/6.webp"
+          srcset="./img/6.webp 1x, ./img/6-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -315,8 +309,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/7.webp"
-          srcset="/UMT-markup-practice-kotliar/img/7.webp 1x, /UMT-markup-practice-kotliar/img/7-2x.webp 2x"
+          src="./img/7.webp"
+          srcset="./img/7.webp 1x, ./img/7-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -331,8 +325,8 @@
       </li>
       <li class="list-item">
         <img
-          src="/UMT-markup-practice-kotliar/img/8.webp"
-          srcset="/UMT-markup-practice-kotliar/img/8.webp 1x, /UMT-markup-practice-kotliar/img/8-2x.webp 2x"
+          src="./img/8.webp"
+          srcset="./img/8.webp 1x, ./img/8-2x.webp 2x"
           alt="flowers image"
           class="flower image"
         />
@@ -346,7 +340,7 @@
         </div>
       </li>
     </ul>
-    <button class="button animated-button" type="button">Show More</button>
+    <button class="button animated-button" aria-label="Show more bouquets" type="button">Show More</button>
   </div>
 </section>
 
@@ -368,14 +362,14 @@
       </li>
     </ul>
     <div class="reviews-nav">
-      <button>
+      <button class="animated-arrow-button" aria-label="Show previous review" type="button">
         <svg class="arrow icon-arrow-left" width="48" height="48">
-          <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-left-arrow-alt"></use>
+          <use href="./symbol-defs.svg#icon-left-arrow-alt"></use>
         </svg>
       </button>
-      <button>
+      <button class="animated-arrow-button" aria-label="Show next review" type="button">
         <svg class="arrow icon-arrow-right" width="48" height="48">
-          <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-right-arrow-alt"></use>
+          <use href="./symbol-defs.svg#icon-right-arrow-alt"></use>
         </svg>
       </button>
     </div>
@@ -395,16 +389,16 @@
       <ul class="contacts-list">
         <li class="contact-item">
           <svg class="icon" width="24" height="24">
-            <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-phone"></use>
+            <use href="./symbol-defs.svg#icon-phone"></use>
           </svg>
           <div class="text">
             <p class="contact-type">Phone</p>
-            <a href="tel:+15551234567" class="contact tel">+1 (555) 123-4567</a>
+            <a href="tel:+15551234567" class="contact tel" aria-label="Call us at +1 (555) 123-4567">+1 (555) 123-4567</a>
           </div>
         </li>
         <li class="contact-item">
           <svg class="icon" width="24" height="24">
-            <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-map"></use>
+            <use href="./symbol-defs.svg#icon-map"></use>
           </svg>
           <div class="text">
             <p class="contact-type">Store</p>
@@ -412,6 +406,7 @@
               href="https://maps.google.com/?q=456+Floral+Ave,+Sydney+NSW+2000+AU"
               class="contact"
               target="_blank"
+              aria-label="Find us on Google Maps at 456 Floral Ave, Sydney NSW 2000 AU"
               >456 Floral Ave, Sydney NSW 2000 AU</a
             >
           </div>
@@ -419,8 +414,8 @@
       </ul>
     </div>
     <img
-      src="/UMT-markup-practice-kotliar/img/contacts-1x.webp"
-      srcset="/UMT-markup-practice-kotliar/img/contacts-1x.webp 1x, /UMT-markup-practice-kotliar/img/contacts-2x.webp 2x"
+      src="./img/contacts-1x.webp"
+      srcset="./img/contacts-1x.webp 1x, ./img/contacts-2x.webp 2x"
       alt="flowers image"
       class="image"
     />
@@ -432,47 +427,47 @@
     <footer id="footer" class="footer-section">
   <div class="container">
     <div class="main">
-      <a href="#" class="logo">
+      <a aria-label="logo" href="#" class="logo">
         <svg class="icon" width="296" height="126">
-          <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Company-Logo"></use>
+          <use href="./symbol-defs.svg#icon-Company-Logo"></use>
         </svg>
       </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#AboutUs" class="nav-href">About Us</a>
+          <a aria-label="about us" href="#AboutUs" class="nav-href">About Us</a>
         </li>
         <li class="nav-item">
-          <a href="#Bestsellers" class="nav-href">Bestsellers</a>
+          <a aria-label="bestsellers" href="#Bestsellers" class="nav-href">Bestsellers</a>
         </li>
         <li class="nav-item">
-          <a href="#Bouquets" class="nav-href">Bouquets</a>
+          <a aria-label="bouquets" href="#Bouquets" class="nav-href">Bouquets</a>
         </li>
         <li class="nav-item">
-          <a href="#Feedback" class="nav-href">Feedback</a>
+          <a aria-label="feedback" href="#Feedback" class="nav-href">Feedback</a>
         </li>
         <li class="nav-item">
-          <a href="#Contacts" class="nav-href">Contacts</a>
+          <a aria-label="contacts" href="#Contacts" class="nav-href">Contacts</a>
         </li>
       </ul>
       <ul class="contacts-list">
         <li class="contacts">
-          <a href="https://www.facebook.com" target="_blank">
+          <a aria-label="facebook" href="https://www.facebook.com" target="_blank">
             <svg class="icon" width="40" height="40">
-              <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Facebook"></use>
+              <use href="./symbol-defs.svg#icon-Facebook"></use>
             </svg>
           </a>
         </li>
         <li class="contacts">
-          <a href="https://www.instagram.com" target="_blank">
+          <a aria-label="instagram" href="https://www.instagram.com" target="_blank">
             <svg class="icon" width="40" height="40">
-              <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-Instagram"></use>
+              <use href="./symbol-defs.svg#icon-Instagram"></use>
             </svg>
           </a>
         </li>
         <li class="contacts">
-          <a href="https://x.com" target="_blank">
+          <a aria-label="twitter" href="https://x.com" target="_blank">
             <svg class="icon" width="40" height="40">
-              <use href="/UMT-markup-practice-kotliar/symbol-defs.svg#icon-X"></use>
+              <use href="./symbol-defs.svg#icon-X"></use>
             </svg>
           </a>
         </li>
@@ -488,5 +483,4 @@
 
 
   </body>
-
 </html>
