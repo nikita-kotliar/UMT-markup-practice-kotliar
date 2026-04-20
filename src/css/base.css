@@ -102,6 +102,10 @@ button.animated-arrow-button {
   background-color: var(--white);
 }
 button.animated-arrow-button:hover {
+  background-color: #D9FBCF;
+  opacity: 1;
+}
+button.animated-arrow-button:active {
   background-color: #7af259;
   opacity: 1;
 }
