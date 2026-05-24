@@ -64,4 +64,4 @@ import{n as e,r as t,t as n}from"./rolldown-runtime-B97S5rRB.js";import{a as r,i
         <p class="text">${e.text}</p>
         <p class="author">${e.author}</p>
       </li>`).join(``),new r(`.reviews-swiper`,{loop:!0,autoplay:{delay:5e3,disableOnInteraction:!1,pauseOnMouseEnter:!0},navigation:{nextEl:`.reviews-swiper .swiper-button-next`,prevEl:`.reviews-swiper .swiper-button-prev`},breakpoints:{0:{slidesPerView:1,spaceBetween:0},768:{slidesPerView:2,spaceBetween:24},1440:{slidesPerView:3,spaceBetween:32}}})}k(),W(),K()}))();
-//# sourceMappingURL=index-907X3NTC.js.map
+//# sourceMappingURL=index-BoEFoFp9.js.map
