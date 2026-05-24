@@ -1,0 +1,311 @@
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-backdrop.is-open {
+  display: block;
+}
+.modal-backdrop .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 56px 20px;
+  border-radius: 16px;
+  z-index: 1000;
+  width: 335px;
+  max-height: 90vh;
+  overflow-y: hidden;
+}
+
+@media (max-width: 335px) {
+  .modal-backdrop .modal {
+    width: 100%
+  }
+}
+
+.modal-backdrop .close-modal-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-backdrop .close-modal-btn svg {
+  fill: var(--black);
+  padding: 8px;
+}
+
+.modal-backdrop .content.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 100%;
+}
+
+.modal-backdrop .flower-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.modal-backdrop .text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-backdrop .flower-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.modal-backdrop .price {
+  width: fit-content;
+  padding-right: 16px;
+  border-right: 1px solid color-mix(in srgb, var(--black) 15%, transparent);
+  font-size: 20px;
+  line-height: 1.4;
+}
+.modal-backdrop .flower-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-backdrop .purchase-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+  gap: 16px;
+}
+
+.modal-backdrop .purchase-section .button {
+  width: 100%;
+  height: 44px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-backdrop .purchase-section .quantity-input {
+  width: 64px;
+  height: 44px;
+  border: 1px solid color-mix(in srgb, var(--black) 15%, transparent);
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .modal-backdrop .modal {
+    padding: 64px 32px;
+    width: 704px;
+    max-width: unset;
+  }
+  .modal-backdrop .content.about {
+    flex-direction: row;
+  }
+  .modal-backdrop .flower-image {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .modal-backdrop .text {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-backdrop .modal {
+    padding: 64px 64px;
+    width: 1280px;
+  }
+  .modal-backdrop .flower-image {
+    width: 50%;
+  }
+  .modal-backdrop .text {
+    width: 50%;
+  }
+  .modal-backdrop .content.about {
+    gap: 80px;
+  }
+}
+
+
+.modal-backdrop .content.form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  height: 100%;
+
+}
+
+.modal-backdrop .modal-title {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.modal-backdrop .modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-backdrop .modal-form-label {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.modal-backdrop .modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid color-mix(in srgb, var(--black) 15%, transparent);
+  border-radius: 16px;
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 8px 12px;
+}
+
+.modal-backdrop .modal-form-input#comment {
+  height: 120px;
+  resize: none;
+}
+
+.modal-backdrop .modal-form .submit-btn {
+  width: 295px;
+  height: 44px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .modal-backdrop .modal-form .submit-btn {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-backdrop .modal-form .submit-btn {
+    width: 159px;
+  }
+}
+
+.modal-backdrop .modal-form-input:focus,
+.modal-backdrop .modal-form-input:focus-visible {
+  border: 2px solid var(--black);
+  outline: none;
+  
+}
+
+.modal-backdrop .modal-form-input:focus > .modal-backdrop .modal-form-label,
+.modal-backdrop .modal-form-input:focus-visible > .modal-backdrop .modal-form-label {
+  transform: translateY(-4px);
+}
+
+.modal-backdrop .form-group {
+  position: relative;
+}
+.field-error {
+  display: block;
+  opacity: 1;
+  font-size: 12px;
+  color: var(--red);
+  margin-top: 4px;
+  min-height: 16px;
+  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease;
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+}
+
+.field-error.hidden {
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+
+.modal-form-input.input-error {
+  border-color: var(--red);
+  outline-color: var(--red);
+}
+
+.modal-backdrop .modal-form-label {
+  transition: transform 0.2s ease;
+
+}
+
+.modal-backdrop .modal-form-label.label-focused {
+  transform: translateY(-4px);
+}
+
+
+.modal-backdrop .content {
+  max-height: calc(90vh - 112px); 
+  
+  overflow-y: scroll; 
+
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--black) 25%, transparent) transparent;
+}
+
+.modal-backdrop .content::-webkit-scrollbar {
+  width: 4px;
+  display: block; 
+}
+
+.modal-backdrop .content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-backdrop .content::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--black) 35%, transparent); 
+  border-radius: 99px;
+}
+
+.modal-backdrop .content::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--black) 60%, transparent);
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  .modal-backdrop .content {
+    max-height: calc(90vh - 128px); 
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal-backdrop .content {
+    max-height: calc(90vh - 128px);
+  }
+}
+

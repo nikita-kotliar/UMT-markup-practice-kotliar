@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { glob } from "glob";
 import injectHTML from "vite-plugin-html-inject";
 import FullReload from "vite-plugin-full-reload";
-import SortCss from "postcss-sort-media-queries"; 
+import SortCss from "postcss-sort-media-queries";
 
 export default defineConfig(({ command }) => {
   return {
@@ -10,6 +10,7 @@ export default defineConfig(({ command }) => {
       [command === "serve" ? "global" : "_global"]: {},
     },
     root: "src",
+    envDir: "../",
     css: {
       postcss: {
         plugins: [
@@ -17,6 +18,15 @@ export default defineConfig(({ command }) => {
             sort: "mobile-first",
           }),
         ],
+      },
+    },
+    server: {
+      // Proxy /api calls to local backend during development
+      proxy: {
+        "/api": {
+          target: "http://localhost:3000",
+          changeOrigin: true,
+        },
       },
     },
     build: {

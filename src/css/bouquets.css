@@ -28,6 +28,36 @@
     flex-direction: column;
     gap: 24px;
     width: 100%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.bouquets-section .list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border-radius: 32px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1; 
+}
+
+.bouquets-section .list-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    z-index: 9;
+}
+
+.bouquets-section .list-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.05); 
+    
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
 }
 
 .bouquets-section .image {

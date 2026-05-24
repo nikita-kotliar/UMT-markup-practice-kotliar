@@ -15,6 +15,10 @@
   font-weight: 400;
   font-size: 16px;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 p {
   font-size: 18px;
@@ -22,6 +26,7 @@ p {
 
 body {
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 main {
@@ -133,4 +138,9 @@ button.animated-arrow-button:active {
   100% {
     background-position: 200% 50%;
   }
+}
+
+
+.hidden {
+  display: none;
 }
