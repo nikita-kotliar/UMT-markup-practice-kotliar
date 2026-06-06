@@ -334,7 +334,7 @@ function renderFormModal(bouquetData) {
       ?.addEventListener("input", () => clearError(id));
   });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
@@ -381,12 +381,30 @@ function renderFormModal(bouquetData) {
       },
     };
 
-    console.log("Order submitted:", orderData);
-    closeModal();
-    toast.success(
-      `Order for "${bouquetData.title}" placed! We'll contact you soon.`,
-      { duration: 6000 },
-    );
+    const submitBtn = form.querySelector(".submit-btn");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Placing order...";
+
+    try {
+      const res = await fetch(`${API_BASE}api/orders`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderData),
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      closeModal();
+      toast.success(
+        `Order for "${bouquetData.title}" placed! We'll contact you soon.`,
+        { duration: 6000 },
+      );
+    } catch (error) {
+      console.error("Order submission failed:", error);
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Go to Checkout";
+      toast.error("Failed to place order. Please try again.");
+    }
   });
 
   closeModalBtn._formBackHandler = () => renderBouquetModal(bouquetData);
@@ -570,7 +588,21 @@ const FALLBACK_REVIEWS = [
 ];
 
 async function initReviews() {
-  const reviews = FALLBACK_REVIEWS;
+  let reviews = [];
+
+  try {
+    const res = await fetch(`${API_BASE}api/reviews`);
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        reviews = data;
+      }
+    }
+  } catch {}
+
+  if (reviews.length === 0) {
+    reviews = FALLBACK_REVIEWS;
+  }
 
   const wrapper = document.querySelector(".reviews-swiper .swiper-wrapper");
   wrapper.innerHTML = reviews
